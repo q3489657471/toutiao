@@ -1,13 +1,24 @@
 <template>
-  <div>黑马头条</div>
+  <div>
+    <router-view></router-view>
+    
+  </div>
 </template>
 
 <script>
-export default {
+// import axios from "@/utils/request"
 
+export default {
+  created(){
+    // console.dir(axios);
+    
+  },
+  methods:{
+    
+  }
 }
 </script>
 
-<style>
+<style scoped lang='less'>
 
 </style>
