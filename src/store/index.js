@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import {setToken,getToken} from '@/utils/auth'
+import { setToken, getToken } from '@/utils/auth'
 
 Vue.use(Vuex)
 
@@ -15,9 +15,9 @@ export default new Vuex.Store({
 
   mutations: {
     SET_TOKEN(state, payload) {
-      //1.将token存入vuex
+      // 1.将token存入vuex
       state.tokenObj = payload
-      //2.token存入本地存储中
+      // 2.token存入本地存储中
       // -本地存储 操作是JSON格式字符串
       // localStorage.setItem('HEIMA_TOUTIAO_TOKEN', JSON.stringify(payload))
       setToken(payload)
