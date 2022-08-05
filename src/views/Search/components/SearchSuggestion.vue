@@ -44,11 +44,10 @@ export default {
   computed: {
     hightlightSuggestions() {
       const reg = new RegExp(this.keywords, 'ig')
-      return this.suggestions.map((item) => {
-        return item.replace(reg, (match) => {
-          return `<span style="color: red">${match}</span>`
-        })
-      })
+
+      return this.suggestions.map((item) =>
+        item.replace(reg, (match) => `<span style="color: red">${match}</span>`)
+      )
     }
   },
   watch: {
